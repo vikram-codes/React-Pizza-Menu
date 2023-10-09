@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import "./App.css";
+import "./index.css";
 
 function Pizza() {
   const pizzaData = [
@@ -46,20 +47,47 @@ function Pizza() {
       soldOut: false,
     },
   ];
+
   return (
     <>
       <img src="src/pizzas/spinaci.jpg" alt="Pizza Spinaci"></img>
-      <h2>Pizza Spinaci</h2>
+      <h3>Pizza Spinaci</h3>
       <p>Tomato, mozarella, spinach, and ricotta cheese</p>
     </>
+  );
+}
+
+function Header() {
+  return (
+    <header className="header">
+      <h1>React Pizza Menu</h1>
+    </header>
+  );
+}
+
+function Menu() {
+  return (
+    <main className="menu">
+      <h2>Our Menu</h2>
+      <Pizza />
+    </main>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="footer">
+      We are Currently open at New Delhi, Mumbai, Banglore
+    </footer>
   );
 }
 
 function App() {
   return (
     <>
-      <h1>React Pizza Menu!</h1>
-      <Pizza />
+      <Header />
+      <Menu />
+      <Footer />
     </>
   );
 }
