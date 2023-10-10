@@ -49,14 +49,14 @@ const pizzaData = [
 ];
 
 function Pizza(props) {
-  if (props.pizzaObj.soldOut) return null;
+  // if (props.pizzaObj.soldOut) return null;
 
   return (
-    <li className="pizza">
+    <li className={`pizza ${props.pizzaObj.soldOut ? "sold-out" : ""}`}>
       <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name}></img>
       <h3>{props.pizzaObj.name}</h3>
       <p>{props.pizzaObj.ingredients}</p>
-      <p>{props.pizzaObj.price}</p>
+      <span>{props.pizzaObj.soldOut ? "Sold Out" : props.pizzaObj.price}</span>
     </li>
   );
 }
