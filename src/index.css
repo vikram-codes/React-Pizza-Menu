@@ -35,6 +35,7 @@ body {
 
 .header {
   align-self: stretch;
+  margin-bottom: 2rem;
 }
 
 .header h1 {
@@ -93,6 +94,7 @@ body {
 
 .menu > p {
   font-size: 1.5rem;
+  /* margin-top: 50rem; */
   text-align: center;
   line-height: 1.6;
   width: 80%;
@@ -153,6 +155,7 @@ body {
 
 .footer {
   font-size: 1.4rem;
+  margin-top: 7rem;
 }
 
 .order {
