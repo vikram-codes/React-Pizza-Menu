@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // import { useState } from "react";
 import "./App.css";
 import "./index.css";
@@ -48,6 +49,8 @@ const pizzaData = [
 ];
 
 function Pizza(props) {
+  if (props.pizzaObj.soldOut) return null;
+
   return (
     <li className="pizza">
       <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name}></img>
@@ -69,6 +72,10 @@ function Header() {
 function Menu() {
   return (
     <main className="menu">
+      <p>
+        Authentic Italian cuisine. 6 creative dishes to choose from. All from
+        our stone oven, all organic, all delicious.
+      </p>
       <h2>Our Menu</h2>
       <ul className="pizzas">
         {pizzaData.map((pizza) => (
