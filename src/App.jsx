@@ -95,6 +95,9 @@ function Footer() {
   return (
     <footer className="footer">
       We are Currently open at New Delhi, Mumbai, Banglore
+      <div className="order">
+        <button className="btn">Order Now!</button>
+      </div>
     </footer>
   );
 }
